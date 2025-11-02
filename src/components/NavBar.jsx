@@ -7,12 +7,32 @@
  * Node modules
  * */
 import React from 'react';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import PropTypes  from 'prop-types';
 
 const NavBar = ({navOpen}) => {
     const lastActiveLink = useRef();
     const activeBox = useRef();
+
+    const initActiveBox = () => {
+        activeBox.current.style.top = lastActiveLink.current.offsetTop + 'px';
+        activeBox.current.style.left = lastActiveLink.current.offsetLeft + 'px';
+        activeBox.current.style.width = lastActiveLink.current.offsetWidth + 'px';
+        activeBox.current.style.height = lastActiveLink.current.offsetHeight + 'px';
+    }
+    useEffect(initActiveBox, [])
+    window.addEventListener('resize', initActiveBox);
+
+    const activeCurrentLink = (event) => {
+        lastActiveLink.current?.classList.remove('active');
+        event.target.classList.add('active');
+        lastActiveLink.current = event.target;
+
+        activeBox.current.style.top = event.target.offsetTop + 'px';
+        activeBox.current.style.left = event.target.offsetLeft + 'px';
+        activeBox.current.style.width = event.target.offsetWidth + 'px';
+        activeBox.current.style.height = event.target.offsetHeight + 'px';
+    }
     const navItems = [
         {
             label: 'Home',
@@ -42,7 +62,7 @@ const NavBar = ({navOpen}) => {
         }
     ];
     return (
-        <nav className={"navbar" + (navOpen ? '-active' : '')}>
+        <nav className={'navbar ' + (navOpen ? 'active' : '')}>
             {
                 navItems.map(({ label, link, className, ref},key) => (
                         <a
@@ -50,7 +70,7 @@ const NavBar = ({navOpen}) => {
                             href={link}
                             className={className}
                             ref={ref}
-                            onClick={null}
+                            onClick={activeCurrentLink}
                         >
                             {label}
                         </a>
