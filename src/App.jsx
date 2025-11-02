@@ -7,9 +7,15 @@
  * Components
  * */
 import Header from './components/Header.jsx';
+import Hero from "./components/Hero.jsx";
 const App =  () => {
     return (
-        <Header/>
+        <>{/* React Fragment */}
+            <Header/>
+            <main>
+                <Hero/>
+            </main>
+        </>
     )
 }
 export default App
