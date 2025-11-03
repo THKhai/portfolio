@@ -19,7 +19,7 @@ const Hero = () => {
     return (
         <section
             id="home"
-            className="pt-28 lgg:pt-36"
+            className="flex items-center justify-center gap-8 max-w-6xl mx-auto px-4 pt-28 lgg:pt-36"
         >
             <div
                 className="container items-center lg:grid lg:grid-cols-2 lg:gap-10"
@@ -66,7 +66,7 @@ const Hero = () => {
                     className="hidden lg:block"
                 >
                     <figure
-                        className="ư-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-25%
+                        className="w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-25%
                         via-sky-400/30 to-65% rounded-[60px] overflow-hidden"
                     >
                         <img
