@@ -21,7 +21,10 @@ body{
     @apply text-5xl leading-tight font-semibold lg:text-[55px]
     lg:leading-[1.15];
 }
+.headline-2{
+    @apply text-3xl font-semibold lg:text-4xl lg:leading-tight lg:text-[40px]
 
+}
 
 /*------------------*\
 *utilities

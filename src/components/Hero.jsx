@@ -70,7 +70,7 @@ const Hero = () => {
                         via-sky-400/30 to-65% rounded-[60px] overflow-hidden"
                     >
                         <img
-                            src="/avatar-Hero.png"
+                            src="/avarta-hero.png"
                             alt="Hoang Khai"
                             width={656}
                             height={800}
