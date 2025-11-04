@@ -44,9 +44,11 @@ const work = [
         projectLink:"",
     },
 ];
+
 const Work = () => {
     return (
         <section
+            id="work"
             className={"section"}
         >
             <div className="container">
