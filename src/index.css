@@ -25,6 +25,9 @@ body{
     @apply text-3xl font-semibold lg:text-4xl lg:leading-tight lg:text-[40px]
 
 }
+.title-1{
+    @apply text-[22px] font-normal
+ }
 
 /*------------------*\
 *utilities
