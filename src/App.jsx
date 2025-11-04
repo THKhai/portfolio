@@ -4,6 +4,11 @@
  * */
 
 /**
+ * Node modules
+ * */
+
+
+/**
  * Components
  * */
 import Header from './components/Header.jsx';
@@ -13,6 +18,7 @@ import Skill from "./components/Skill.jsx";
 import Work from "./components/Work.jsx";
 import Review from "./components/Review.jsx";
 import Contact from "./components/Contact.jsx";
+import Footer from "./components/Footer.jsx";
 const App =  () => {
     return (
         <>{/* React Fragment */}
@@ -24,6 +30,7 @@ const App =  () => {
                 <Work/>
                 <Review/>
                 <Contact/>
+                <Footer/>
             </main>
         </>
     )
