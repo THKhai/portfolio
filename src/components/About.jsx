@@ -22,7 +22,7 @@ const About = () => {
             className={"section"}
         >
             <div className="container">
-                <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12">
+                <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
                     <p className="text-zinc-400 mb-4 md:mb-8 md:text-xl md:max-w-[70ch]">
                         Welcome! My name is Tran Hoang Khai, I recently graduated with a degree in Information Systems from VNUHCM-University of Science and am seeking full-time
                         opportunities as a Back-end Developer. I have hands-on experience building back-end systems using C#, ASP.NET Core,

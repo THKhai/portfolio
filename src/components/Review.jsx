@@ -7,9 +7,18 @@
  * Components
  */
 import ReviewCard from "./ReviewCard.jsx";
+
 /**
  * Node modules
  */
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from '@gsap/react';
+
+/**
+ * Register gsap plugins
+ * */
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 import React from 'react';
 
@@ -46,6 +55,17 @@ const reviews = [
     }
 ]
 const Review = () => {
+    useGSAP(() => {
+        gsap.to('.scrub-slide', {
+            scrollTrigger: {
+                trigger: '.scrub-slide',
+                start: 'top 90%',
+                end: 'bottom -50%',
+                scrub: 1,
+            },
+            x: '-1000',
+        })
+    })
     return (
         <section
             id="reviews"
@@ -54,11 +74,11 @@ const Review = () => {
             <div
                 className={"container"}
             >
-                <h2 className={"headline-2 mb-8"}>
+                <h2 className={"headline-2 mb-8 reveal-up"}>
                     What our customers say
                 </h2>
                 <div
-                    className="flex items-center gap-3 w-fit"
+                    className="scrub-slide flex items-center gap-3 w-fit"
                 >
                     {reviews.map(({content,name,imgSrc,company},key) => (
                         <ReviewCard
