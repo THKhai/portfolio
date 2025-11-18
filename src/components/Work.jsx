@@ -18,31 +18,7 @@ const work = [
         title:"E-commerce AirBnb auction",
         tags:["API","FastAPI","Development","Backend"],
         projectLink:"",
-    },
-    {
-        imgSrc: "/AirBnb-auction.png",
-        title:"E-commerce AirBnb auction",
-        tags:["API","FastAPI","Development","Backend"],
-        projectLink:"",
-    },
-    {
-        imgSrc: "/AirBnb-auction.png",
-        title:"E-commerce AirBnb auction",
-        tags:["API","FastAPI","Development","Backend"],
-        projectLink:"",
-    },
-    {
-        imgSrc: "/AirBnb-auction.png",
-        title:"E-commerce AirBnb auction",
-        tags:["API","FastAPI","Development","Backend"],
-        projectLink:"",
-    },
-    {
-        imgSrc: "/AirBnb-auction.png",
-        title:"E-commerce AirBnb auction",
-        tags:["API","FastAPI","Development","Backend"],
-        projectLink:"",
-    },
+    }
 ];
 
 const Work = () => {

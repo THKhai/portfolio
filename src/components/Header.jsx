@@ -23,8 +23,8 @@ const Header = () => {
                         className="logo">
                         <img
                             src="/logo.png"
-                            width={40}
-                            height={40}
+                            width={70}
+                            height={70}
                             alt="KhaiTR"
                             />
                     </a>

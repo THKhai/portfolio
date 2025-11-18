@@ -8,11 +8,11 @@ import React from 'react';
 const aboutItems = [
     {
         label: 'Project done',
-        number: 45
+        number: 6
     },
     {
         label: 'Years of experience',
-        number: 10
+        number: 1
     }
 ];
 const About = () => {
@@ -47,8 +47,8 @@ const About = () => {
                         <img
                             src="/logo.png"
                             alt={"logo"}
-                            width={30}
-                            height={30}
+                            width={70}
+                            height={70}
                             className={"ml-auto md:w-[40px] md:h-[40px]"}
                         />
                     </div>

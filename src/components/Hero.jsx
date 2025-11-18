@@ -10,12 +10,15 @@
 import {ButtonPrimary,ButtonOutline} from "./Button.jsx";
 import React from 'react';
 
+const Hero_content = [
+    {
+        Name:'Trần Hoàng Khải',
+        Position:'Back-end Developer',
+    }
+]
+
 const Hero = () => {
-    const Hero_content = [
-        {
-            Slogan:'Building the future of technology'
-        }
-    ]
+
     return (
         <section
             id="home"
@@ -47,12 +50,17 @@ const Hero = () => {
                         </div>
                     </div>
                     <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10">
-                        {Hero_content[0].Slogan}
+                        {Hero_content[0].Name}
+                    </h2>
+                    <h2 className="text-zinc-400 mb-4 md:mb-8 md:text-xl md:max-w-[100ch] font-bold">
+                        {Hero_content[0].Position}
                     </h2>
                     <div className="flex items-center gap-3">
                         <ButtonPrimary
                             label="Dowload CV"
                             icon="download"
+                            download={'Tran_Hoang_Khai-backend.pdf'}
+                            href={'/Tran_Hoang_Khai-backend.pdf'}
                         />
 
                         <ButtonOutline

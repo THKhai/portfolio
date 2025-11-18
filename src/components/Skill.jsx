@@ -138,36 +138,36 @@ const skillItems = [
     },
 
     // Soft Skills
-    {
-        imgSrc: "https://cdn-icons-png.flaticon.com/512/1534/1534938.png",
-        label: "Teamwork",
-        desc: "Team Collaboration"
-    },
-    {
-        imgSrc: "https://cdn-icons-png.flaticon.com/512/2040/2040946.png",
-        label: "Problem-solving",
-        desc: "System Optimization"
-    },
-    {
-        imgSrc: "https://cdn-icons-png.flaticon.com/512/3048/3048425.png",
-        label: "Adaptability",
-        desc: "Technology Learning"
-    },
-    {
-        imgSrc: "https://cdn-icons-png.flaticon.com/512/2972/2972351.png",
-        label: "Time Management",
-        desc: "Project Planning"
-    },
-    {
-        imgSrc: "https://cdn-icons-png.flaticon.com/512/1087/1087840.png",
-        label: "Presentation Skills",
-        desc: "Technical Presentation"
-    },
-    {
-        imgSrc: "https://cdn-icons-png.flaticon.com/512/3048/3048378.png",
-        label: "Work Under Pressure",
-        desc: "Performance Handling"
-    }
+    // {
+    //     imgSrc: "https://cdn-icons-png.flaticon.com/512/1534/1534938.png",
+    //     label: "Teamwork",
+    //     desc: "Team Collaboration"
+    // },
+    // {
+    //     imgSrc: "https://cdn-icons-png.flaticon.com/512/2040/2040946.png",
+    //     label: "Problem-solving",
+    //     desc: "System Optimization"
+    // },
+    // {
+    //     imgSrc: "https://cdn-icons-png.flaticon.com/512/3048/3048425.png",
+    //     label: "Adaptability",
+    //     desc: "Technology Learning"
+    // },
+    // {
+    //     imgSrc: "https://cdn-icons-png.flaticon.com/512/2972/2972351.png",
+    //     label: "Time Management",
+    //     desc: "Project Planning"
+    // },
+    // {
+    //     imgSrc: "https://cdn-icons-png.flaticon.com/512/1087/1087840.png",
+    //     label: "Presentation Skills",
+    //     desc: "Technical Presentation"
+    // },
+    // {
+    //     imgSrc: "https://cdn-icons-png.flaticon.com/512/3048/3048378.png",
+    //     label: "Work Under Pressure",
+    //     desc: "Performance Handling"
+    // }
 ];
 
 

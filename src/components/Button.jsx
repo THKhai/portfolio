@@ -19,6 +19,7 @@ const ButtonPrimary = (
         href,
         target = '_self',
         icon,
+        download,
         classes
     }
 ) => {
@@ -27,6 +28,7 @@ const ButtonPrimary = (
             <a
                 href={href}
                 target={target}
+                download={download}
                 className={'btn btn-primary ' + classes}
             >
                 {label}
@@ -63,6 +65,7 @@ ButtonPrimary.propTypes = {
     target: PropTypes.string,
     icon: PropTypes.string,
     classes: PropTypes.string,
+    download: PropTypes.string,
 };
 
 const ButtonOutline = (

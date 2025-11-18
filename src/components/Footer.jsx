@@ -122,8 +122,8 @@ const Footer = () => {
                         <img
                             src="/logo.png"
                             alt="logo"
-                            height={40}
-                            width={40}
+                            height={70}
+                            width={70}
                         />
                     </a>
                     <p className={"text-zinc-500 text-sm"}>
