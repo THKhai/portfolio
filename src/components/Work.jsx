@@ -26,7 +26,7 @@ const work = [
         projectLink: "https://github.com/THKhai/UDPT-Hospital-Management-System-BE",
     },
     {
-        imgSrc: "/hrm-system.png",
+        imgSrc: "/hrm-system.jpg",
         title: "HRM Web Application",
         tags: ["ASP.NET Core", "C#", "Entity Framework", "SQL Server", "JWT", "Docker"],
         projectLink: "https://github.com/THKhai/HRM_WebApplication",
