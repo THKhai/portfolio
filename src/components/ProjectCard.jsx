@@ -17,6 +17,7 @@ const ProjectCard = (
         tags,
         projectLink,
         classes,
+        role
     }
 ) => {
     return (

@@ -40,23 +40,19 @@ const sitemap = [
 const socials = [
     {
         label: 'GitHub',
-        href: 'https://www.github.com/codewithsadee-org'
+        href: 'https://github.com/THKhai'
     },
     {
         label: 'LinkedIn',
-        href: 'https://www.linkedin.com/in/codewithsadee'
+        href: 'https://www.linkedin.com/in/khai-tran-263ab9360/'
     },
     {
-        label: 'Twitter X',
-        href: 'https://x.com/codewithsadee_'
+        label: 'Facebook',
+        href: 'https://www.facebook.com/khaitr091202/'
     },
     {
-        label: 'Instagram',
-        href: 'https://www.instagram.com/codewithsadee'
-    },
-    {
-        label: 'CodePen',
-        href: 'https://codepen.io/codewithsadee'
+        label: 'Youtube',
+        href: 'https://www.youtube.com/@khaitranhoang7858'
     }
 ];
 
