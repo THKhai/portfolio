@@ -1,0 +1,26 @@
+# Portfolio → https://kaitr.dev   (www.kaitr.dev redirects to the apex)
+# Deployed by .github/workflows/deploy.yml on the home server; see homelab-infra README.
+name: portfolio
+
+services:
+  web:
+    build:
+      context: .
+      args:
+        # Public build-time value (ends up in the JS bundle anyway); read from .env
+        VITE_GETFORM_URL: ${VITE_GETFORM_URL:-}
+    restart: unless-stopped
+    networks: [edge]
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.portfolio.rule=Host(`kaitr.dev`) || Host(`www.kaitr.dev`)
+      - traefik.http.routers.portfolio.entrypoints=web
+      - traefik.http.routers.portfolio.middlewares=portfolio-www
+      - traefik.http.middlewares.portfolio-www.redirectregex.regex=^https?://www\.kaitr\.dev/(.*)
+      - traefik.http.middlewares.portfolio-www.redirectregex.replacement=https://kaitr.dev/$${1}
+      - traefik.http.middlewares.portfolio-www.redirectregex.permanent=true
+      - traefik.http.services.portfolio.loadbalancer.server.port=80
+
+networks:
+  edge:
+    external: true
