@@ -6,8 +6,6 @@ COPY package*.json ./
 RUN npm ci
 COPY . .
 # Build-time public vars (VITE_*) come in as build args from compose
-ARG VITE_GETFORM_URL
-ENV VITE_GETFORM_URL=$VITE_GETFORM_URL
 RUN npm run build
 
 FROM nginx:1.29-alpine

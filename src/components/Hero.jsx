@@ -13,7 +13,7 @@ import React from 'react';
 const Hero_content = [
     {
         Name:'Trần Hoàng Khải',
-        Position:'Back-end Developer',
+        Position:'Software Engineer',
     }
 ]
 
@@ -57,14 +57,14 @@ const Hero = () => {
                     </h2>
                     <div className="flex items-center gap-3">
                         <ButtonPrimary
-                            label="Dowload CV"
+                            label="Download CV"
                             icon="download"
-                            download={'Tran_Hoang_Khai-backend.pdf'}
-                            href={'/Tran_Hoang_Khai-backend.pdf'}
+                            download={'Tran_Hoang_Khai.pdf'}
+                            href={'/Tran_Hoang_Khai.pdf'}
                         />
 
                         <ButtonOutline
-                            label="Sroll down"
+                            label="Scroll down"
                             href="#about"
                             icon="arrow_downward"
                         />

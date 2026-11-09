@@ -3,7 +3,7 @@
  * @license Apache-2.0
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 
 const socialLinks = [
     {
@@ -36,7 +36,43 @@ const socialLinks = [
     // },
 ];
 
+const CONTACT_EMAIL = 'thkhai0912@gmail.com';
+
 const Contact = () => {
+    // idle | sending | sent | error
+    const [status, setStatus] = useState('idle');
+    const [errorText, setErrorText] = useState('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+        setStatus('sending');
+        setErrorText('');
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(Object.fromEntries(new FormData(form))),
+            });
+            if (res.ok) {
+                setStatus('sent');
+                form.reset();
+                return;
+            }
+            const data = await res.json().catch(() => ({}));
+            setErrorText(
+                res.status === 429
+                    ? 'Too many messages from your network. Please try again later.'
+                    : data.fields ? Object.values(data.fields).join(' ')
+                    : data.error || 'Something went wrong.'
+            );
+            setStatus('error');
+        } catch {
+            setErrorText('Network error. Please check your connection.');
+            setStatus('error');
+        }
+    };
+
     return (
         <section
             id="contact"
@@ -76,10 +112,14 @@ const Contact = () => {
                     </div>
                 </div>
                 <form
-                    action={import.meta.env.VITE_GETFORM_URL}
-                    method={"POST"}
-                    className={"xl:pl-10 2xl-pl-20"}
+                    onSubmit={handleSubmit}
+                    className={"relative xl:pl-10 2xl:pl-20"}
                 >
+                    {/* Honeypot: hidden from people, bots fill it in and get silently dropped by the API */}
+                    <div className={"absolute -left-[9999px] w-px h-px overflow-hidden"} aria-hidden={true}>
+                        <label htmlFor="website">Website</label>
+                        <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off"/>
+                    </div>
                     <div className={"md:grid md:items-center md:grid-cols-2 md:gap-2"}>
                         <div className="mb-4">
                             <label htmlFor="name" className={"label reveal-up"}>Name</label>
@@ -121,10 +161,23 @@ const Contact = () => {
 
                     <button
                         type="submit"
-                        className={"btn btn-primary [&]:!max-w-full w-full justify-center reveal-up"}
+                        disabled={status === 'sending'}
+                        className={"btn btn-primary [&]:!max-w-full w-full justify-center reveal-up disabled:opacity-60"}
                     >
-                        Submit
+                        {status === 'sending' ? 'Sending…' : 'Submit'}
                     </button>
+
+                    <p className={"mt-3 min-h-6 text-sm"} role="status" aria-live="polite">
+                        {status === 'sent' && (
+                            <span className={"text-emerald-400"}>Thanks! Your message has been sent. I&apos;ll get back to you soon.</span>
+                        )}
+                        {status === 'error' && (
+                            <span className={"text-red-400"}>
+                                {errorText} You can also email me at{' '}
+                                <a href={`mailto:${CONTACT_EMAIL}`} className={"underline hover:text-red-300"}>{CONTACT_EMAIL}</a>.
+                            </span>
+                        )}
+                    </p>
                 </form>
             </div>
 

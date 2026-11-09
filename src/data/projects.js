@@ -12,11 +12,18 @@
  */
 const projects = [
     {
+        imgSrc: "/dealership-scheduler.jpg",
+        title: "Dealership Service Scheduler",
+        tags: [".NET 10", "EF Core", "PostgreSQL", "xUnit", "Testcontainers", "OpenTelemetry"],
+        liveUrl: null,
+        sourceUrl: "https://github.com/THKhai/dealership-service-scheduler",
+    },
+    {
         imgSrc: "/AirBnb-auction.png",
         title: "E-commerce AirBnb auction",
-        tags: ["API", "FastAPI", "Next.js", "Backend"],
+        tags: ["FastAPI", "Next.js", "PostgreSQL", "Redis", "RabbitMQ", "WebSockets"],
         liveUrl: null, // → "https://airbnb.kaitr.dev" after deploy
-        sourceUrl: "https://github.com/vongagh094/ecommerce_be",
+        sourceUrl: "https://github.com/THKhai/EC-Airbnb",
     },
     {
         imgSrc: "/hospital-management.png",

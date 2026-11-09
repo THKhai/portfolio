@@ -13,6 +13,7 @@ import PropTypes from 'prop-types';
 const SkillCard = (
     {
         imgSrc,
+        icon = "code",
         label,
         desc,
         classes,
@@ -25,13 +26,20 @@ const SkillCard = (
                 className={"bg-zinc-700/50 rounded-lg overflow-hidden w-12 h-12 group-hover:bg-zinc-900" +
                     "transition-colors"}
             >
-                <img
-                    src={imgSrc}
-                    alt={label}
-                    width={32}
-                    height={32}
-                    className={"w-full h-full object-contain"}
-                />
+                {imgSrc ? (
+                    <img
+                        src={imgSrc}
+                        alt={label}
+                        width={32}
+                        height={32}
+                        className={"w-full h-full object-contain"}
+                    />
+                ) : (
+                    // No brand logo available → Material Symbol fallback
+                    <span className={"material-symbols-rounded w-full h-full grid place-items-center text-sky-400"} aria-hidden={true}>
+                        {icon}
+                    </span>
+                )}
             </figure>
             <div>
                 <h3>{label}</h3>
@@ -42,7 +50,8 @@ const SkillCard = (
 };
 
 SkillCard.propTypes = {
-    imgSrc: PropTypes.string.isRequired,
+    imgSrc: PropTypes.string,
+    icon: PropTypes.string,
     label: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
     classes: PropTypes.string,

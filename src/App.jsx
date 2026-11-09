@@ -25,7 +25,7 @@ import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Skill from "./components/Skill.jsx";
 import Work from "./components/Work.jsx";
-import Review from "./components/Review.jsx";
+import Experience from "./components/Experience.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 
@@ -59,8 +59,8 @@ const App =  () => {
                 <Hero/>
                 <About/>
                 <Skill/>
+                <Experience/>
                 <Work/>
-                {/*<Review/>*/}
                 <Contact/>
                 <Footer/>
             </main>

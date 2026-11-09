@@ -30,3 +30,7 @@ dist-ssr
 .claude
 # graphify output (generated)
 graphify-out/
+
+# .NET
+api/bin/
+api/obj/

@@ -5,15 +5,11 @@
 
 
 import React from 'react';
+// Figures from the EMERGE app role (see CV)
 const aboutItems = [
-    {
-        label: 'Project done',
-        number: 6
-    },
-    {
-        label: 'Years of experience',
-        number: 1
-    }
+    { number: '86', suffix: '', label: 'Tickets delivered' },
+    { number: '90.7', suffix: '%', label: 'On-time delivery' },
+    { number: '6', suffix: '', label: 'Agile sprints' },
 ];
 const About = () => {
     return (
@@ -24,23 +20,21 @@ const About = () => {
             <div className="container">
                 <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
                     <p className="text-zinc-400 mb-4 md:mb-8 md:text-xl md:max-w-[70ch]">
-                        Welcome! My name is Tran Hoang Khai, I recently graduated with a degree in Information Systems from VNUHCM-University of Science and am seeking full-time
-                        opportunities as a Back-end Developer. I have hands-on experience building back-end systems using C#, ASP.NET Core,
-                        FastAPI, and Entity Framework Core for .NET and SQLAlchemy/SQLModel for FastAPI, with practical experience in HRM
-                        systems and e-commerce platforms.<br/>
-                        My current goal is to build a long-term commitment with the company in order to understand the work environment and
-                        gain valuable experience. I also aim to expand my knowledge about career development paths and future opportunities for
-                        personal growth in the IT field
+                        Hi, I&apos;m Tran Hoang Khai, a Software Engineer with hands-on experience building and optimizing
+                        enterprise systems using C#, ASP.NET and SQL Server. At EMERGE app I delivered features and fixes on a
+                        multi-tenant ERP platform, with strengths in debugging, database optimization and system integrations.<br/>
+                        I graduated in Information Systems from VNUHCM - University of Science, and I&apos;m looking to grow
+                        further into scalable system design and distributed architectures.
                     </p>
                     <div className="flex flex-wrap items-center gap-4 md:gap-7">
                         {
-                            aboutItems.map(({label, number},key) => (
-                                <div key={key}>
+                            aboutItems.map(({label, number, suffix}) => (
+                                <div key={label}>
                                     <div className="flex items-center md:mb-2">
                                         <span className={"text-2xl font-bold md:text-4xl"}>{number}</span>
-                                        <span className="text-sky-400 font-semibold md:text-3xl">+</span>
+                                        {suffix && <span className="text-sky-400 font-semibold md:text-3xl">{suffix}</span>}
                                     </div>
-                                    <p className="texxt=sm text-zinc-400">{label}</p>
+                                    <p className="text-sm text-zinc-400">{label}</p>
                                 </div>
                             ))
                         }

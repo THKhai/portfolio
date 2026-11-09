@@ -24,12 +24,12 @@ const sitemap = [
         href: '#about'
     },
     {
-        label: 'Work',
-        href: '#work'
+        label: 'Experience',
+        href: '#experience'
     },
     {
-        label: 'Reviews',
-        href: '#reviews'
+        label: 'Work',
+        href: '#work'
     },
     {
         label: 'Contact me',
@@ -123,7 +123,7 @@ const Footer = () => {
                         />
                     </a>
                     <p className={"text-zinc-500 text-sm"}>
-                        &copy; 2025 <span className={"text-zinc-200"}>KhaiTR</span>
+                        &copy; {new Date().getFullYear()} <span className={"text-zinc-200"}>KhaiTR</span>
                     </p>
                 </div>
             </div>
