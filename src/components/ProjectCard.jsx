@@ -22,6 +22,7 @@ const ProjectCard = (
         tags,
         liveUrl,
         sourceUrl,
+        note,
         classes = ""
     }
 ) => {
@@ -68,6 +69,11 @@ const ProjectCard = (
                             </span>
                         ))}
                     </div>
+                    {note && (
+                        <p className={"mt-3 text-sm text-zinc-400"}>
+                            {note}
+                        </p>
+                    )}
                 </div>
                 <div className={"flex flex-col gap-2 shrink-0"}>
                     <div
@@ -115,6 +121,7 @@ ProjectCard.propTypes = {
     tags: PropTypes.arrayOf(PropTypes.string).isRequired,
     liveUrl: PropTypes.string,
     sourceUrl: PropTypes.string,
+    note: PropTypes.string,
     classes: PropTypes.string,
 }
 export default ProjectCard;

@@ -9,6 +9,7 @@
  * liveUrl:   the project's subdomain once it is deployed (https://<name>.kaitr.dev).
  *            Leave null until the deploy is live; the card then links to the source.
  * sourceUrl: GitHub repository.
+ * note:      optional one-liner under the tags (e.g. how to try the demo).
  */
 const projects = [
     {
@@ -22,7 +23,8 @@ const projects = [
         imgSrc: "/AirBnb-auction.png",
         title: "E-commerce AirBnb auction",
         tags: ["FastAPI", "Next.js", "PostgreSQL", "Redis", "RabbitMQ", "WebSockets"],
-        liveUrl: null, // → "https://airbnb.kaitr.dev" after deploy
+        liveUrl: "https://airbnb.kaitr.dev",
+        note: "One-click demo guest/host accounts, no sign-up. Data resets nightly.",
         sourceUrl: "https://github.com/THKhai/EC-Airbnb",
     },
     {

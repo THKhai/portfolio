@@ -31,7 +31,7 @@ const Work = () => {
                     className={"grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,minmax(280px,_1fr))]"}
                 >
                     {
-                        projects.map(({imgSrc, title, tags, liveUrl, sourceUrl}) => (
+                        projects.map(({imgSrc, title, tags, liveUrl, sourceUrl, note}) => (
                             <ProjectCard
                                 key={title}
                                 imgSrc={imgSrc}
@@ -39,6 +39,7 @@ const Work = () => {
                                 tags={tags}
                                 liveUrl={liveUrl}
                                 sourceUrl={sourceUrl}
+                                note={note}
                                 classes={"reveal-up"}
                             />
                         ))
