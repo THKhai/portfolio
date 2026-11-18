@@ -52,30 +52,14 @@ const ProjectCard = (
                     </span>
                 )}
             </figure>
-            <div className={"flex items-center justify-between gap-4"}>
-                <div>
-                    <h3
-                        className={"title-1 mb-3"}
-                    >
-                        {title}
-                    </h3>
-                    <div className={"flex flex-wrap items-center gap-2"}>
-                        {tags.map((label) => (
-                            <span
-                                key={label}
-                                className={"h-9 text-sm text-zinc-400 bg-zinc-50/5 grid items-center px-3 rounded-lg"}
-                            >
-                                {label}
-                            </span>
-                        ))}
-                    </div>
-                    {note && (
-                        <p className={"mt-3 text-sm text-zinc-400"}>
-                            {note}
-                        </p>
-                    )}
-                </div>
-                <div className={"flex flex-col gap-2 shrink-0"}>
+            {/* Title row: buttons pinned top-right so every card lines them up the same way */}
+            <div className={"flex items-start justify-between gap-4 mb-3"}>
+                <h3
+                    className={"title-1"}
+                >
+                    {title}
+                </h3>
+                <div className={"flex gap-2 shrink-0"}>
                     <div
                         className={"w-11 h-11 rounded-lg grid place-items-center bg-sky-400 text-zinc-950"}
                         title={liveUrl ? "Open live demo" : "View source"}
@@ -105,6 +89,21 @@ const ProjectCard = (
                     )}
                 </div>
             </div>
+            <div className={"flex flex-wrap items-center gap-2"}>
+                {tags.map((label) => (
+                    <span
+                        key={label}
+                        className={"h-9 text-sm text-zinc-400 bg-zinc-50/5 grid items-center px-3 rounded-lg"}
+                    >
+                        {label}
+                    </span>
+                ))}
+            </div>
+            {note && (
+                <p className={"mt-3 text-sm text-zinc-400"}>
+                    {note}
+                </p>
+            )}
             <a
                 href={primaryUrl}
                 target="_blank"
