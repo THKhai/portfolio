@@ -16,7 +16,8 @@ const projects = [
         imgSrc: "/dealership-scheduler.jpg",
         title: "Dealership Service Scheduler",
         tags: [".NET 10", "EF Core", "PostgreSQL", "xUnit", "Testcontainers", "OpenTelemetry"],
-        liveUrl: null,
+        liveUrl: "https://scheduler.kaitr.dev",
+        note: "Live booking UI, no sign-up. Data resets nightly.",
         sourceUrl: "https://github.com/THKhai/dealership-service-scheduler",
     },
     {
